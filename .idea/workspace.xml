@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b975c217-b284-4046-9602-61ebdc5f5de0" name="Default Changelist" comment="user creation updated">
+    <list default="true" id="b975c217-b284-4046-9602-61ebdc5f5de0" name="Default Changelist" comment="5">
       <changelist_data name="" email="" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/competetion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/competetion/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webelopers/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/webelopers/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +141,13 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۰۵" />
       <updated>1573132880241</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL‎۰۰۰۰۶" summary="5">
+      <created>1573133413058</created>
+      <option name="number" value="LOCAL‎۰۰۰۰۶" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۰۶" />
+      <updated>1573133413058</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,7 +169,8 @@
     <MESSAGE value="initial contact" />
     <MESSAGE value="user creation" />
     <MESSAGE value="user creation updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="user creation updated" />
+    <MESSAGE value="5" />
+    <option name="LAST_COMMIT_MESSAGE" value="5" />
   </component>
   <component name="WindowStateProjectService">
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1573126381304">
