@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b975c217-b284-4046-9602-61ebdc5f5de0" name="Default Changelist" comment="5 add finale?">
+    <list default="true" id="b975c217-b284-4046-9602-61ebdc5f5de0" name="Default Changelist" comment="user login">
       <changelist_data name="" email="" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/competetion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/competetion/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webelopers/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/webelopers/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webelopers/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/webelopers/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +74,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ali" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
     <configuration name="competetion" type="Python.DjangoServer" factoryName="Django server">
@@ -167,7 +175,13 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۰۹" />
       <updated>1573135023944</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL‎۰۰۰۱۰" summary="user login">
+      <created>1573153657899</created>
+      <option name="number" value="LOCAL‎۰۰۰۱۰" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۱۰" />
+      <updated>1573153657899</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,7 +209,8 @@
     <MESSAGE value="5 add" />
     <MESSAGE value="5 addd" />
     <MESSAGE value="5 add finale?" />
-    <option name="LAST_COMMIT_MESSAGE" value="5 add finale?" />
+    <MESSAGE value="user login" />
+    <option name="LAST_COMMIT_MESSAGE" value="user login" />
   </component>
   <component name="WindowStateProjectService">
     <state x="147" y="65" key="DiffContextDialog" timestamp="1573135647677">
@@ -206,6 +221,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1573126381304" />
+    <state width="501" height="210" key="GridCell.Tab.0.bottom" timestamp="1573153665645">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="501" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1573153665645" />
+    <state width="501" height="210" key="GridCell.Tab.0.center" timestamp="1573153665644">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="501" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1573153665644" />
+    <state width="501" height="210" key="GridCell.Tab.0.left" timestamp="1573153665644">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="501" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1573153665644" />
+    <state width="501" height="210" key="GridCell.Tab.0.right" timestamp="1573153665644">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="501" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1573153665644" />
     <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1573129270600">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -218,10 +249,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="481" y="128" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1573123815693" />
-    <state x="277" y="54" key="SettingsEditor" timestamp="1573134861425">
+    <state x="277" y="54" key="SettingsEditor" timestamp="1573153674643">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="54" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1573134861425" />
+    <state x="277" y="54" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1573153674643" />
     <state x="487" y="203" key="git4idea.merge.GitPullDialog" timestamp="1573135630007">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

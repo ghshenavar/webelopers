@@ -4,6 +4,13 @@
   <h2>Sign up</h2>
   <form method="post" class="ui form" id="register_form" action="{% url 'register' %}">
     {% csrf_token %}
+      {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
     {{ form.as_p }}
     <button name="submit" type="submit" class="ui button">Sign up</button>
   </form>

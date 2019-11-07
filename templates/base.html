@@ -11,7 +11,7 @@
 <div id="navbar">
     <nav id="navbar" class="navbar navbar-light bg-light">
         {% if request.user.is_authenticated %}
-            <a id="logout" class="navbar-brand" href="/">logout</a>
+            <a id="logout" class="navbar-brand" href="/logout/">logout</a>
         {% endif %}
         {% if not request.user.is_authenticated %}
             <a id="login" class="navbar-brand" href="/login/">login</a>

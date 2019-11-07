@@ -1,4 +1,4 @@
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.forms import UserCreationForm
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -25,7 +25,6 @@ def registering(request):
 			username = form.cleaned_data.get('username')
 			raw_password = form.cleaned_data.get('password')
 			user = authenticate(username=username, password=raw_password)
-			# login(request, user)
 			return redirect('/')
 	else:
 		form = SignUpForm()
@@ -68,3 +67,8 @@ def contact(request):
 
 def confirmation(request):
 	return render(request, 'confirmation.html')
+
+
+def logout_view(request):
+	logout(request)
+	return redirect('/')
