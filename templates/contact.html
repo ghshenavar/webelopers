@@ -8,19 +8,8 @@
 <body>
     {% block main %}
     <form id="contac_us_form" method="post" class="ui form">
-    {% csrf_token %}
-        <div class="field">
-            <label>title</label>
-            <input name="title" id="name">
-        </div>
-        <div class="field">
-            <label>email address</label>
-            <input name="emial" id="email">
-        </div>
-        <div class="field">
-            <label>text</label>
-            <textarea name="text" id="text"></textarea>
-        </div>
+        {% csrf_token %}
+        {{ form.as_p }}
         <button class="ui button" type="submit">submit</button>
     </form>
     {% endblock %}

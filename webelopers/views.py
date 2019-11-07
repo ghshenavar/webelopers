@@ -34,11 +34,11 @@ def contact(request):
 	if request.method == 'POST':
 		form = ContactForm(request.POST)
 		if form.is_valid():
-			return redirect('confirmation')
+			return redirect('confirmed/')
 	else:
-		form = forms.Form()
+		form = ContactForm()
 	return render(request, 'contact.html', {'form': form})
 
 
 def confirmation(request):
-	render(request, 'confirmed.html')
+	return render(request, 'confirmation.html')

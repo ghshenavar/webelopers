@@ -23,4 +23,5 @@ urlpatterns = [
     path('', index, name='homePage'),
     path('register/', registering, name='register'),
     path('contact/', contact, name='contact_us'),
+    path('contact/confirmed/', confirmation, name='confirmed')
 ]
