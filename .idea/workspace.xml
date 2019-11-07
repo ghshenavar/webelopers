@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b975c217-b284-4046-9602-61ebdc5f5de0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webelopers/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/webelopers/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="b975c217-b284-4046-9602-61ebdc5f5de0" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -174,7 +170,14 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۰۹" />
       <updated>1573135023944</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="ahlkerug;ukeahpgrijvlea'egr">
+      <created>1573140545553</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1573140545553</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,7 +205,8 @@
     <MESSAGE value="5 add" />
     <MESSAGE value="5 addd" />
     <MESSAGE value="5 add finale?" />
-    <option name="LAST_COMMIT_MESSAGE" value="5 add finale?" />
+    <MESSAGE value="ahlkerug;ukeahpgrijvlea'egr" />
+    <option name="LAST_COMMIT_MESSAGE" value="ahlkerug;ukeahpgrijvlea'egr" />
   </component>
   <component name="WindowStateProjectService">
     <state x="147" y="65" key="DiffContextDialog" timestamp="1573135647677">
