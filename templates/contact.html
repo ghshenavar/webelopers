@@ -7,7 +7,7 @@
 </head>
 <body>
     {% block main %}
-    <form id="contac_us_form" method="post" class="ui form" action="{% url 'contact/confirmed' %}">
+    <form id="contact_us_form" method="post" class="ui form" action="{% url 'contact_us' %}">
         {% csrf_token %}
         {{ form.as_p }}
         <button class="ui button" type="submit">submit</button>
