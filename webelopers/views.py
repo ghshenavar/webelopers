@@ -23,3 +23,6 @@ def registering(request):
 		form = UserCreationForm()
 
 	return render(request, 'register.html',{'form':form})
+
+#def contact(request):
+	#if request.method == 'POST':
