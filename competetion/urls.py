@@ -24,5 +24,5 @@ urlpatterns = [
 	path('register/', registering, name='register'),
 	path('contact/', contact, name='contact_us'),
 	path('contact/confirmed/', confirmation, name='confirmed'),
-	path('login/', login, name='login')
+	path('login/', Login, name='login'),
 ]

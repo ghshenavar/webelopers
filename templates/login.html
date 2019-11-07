@@ -9,10 +9,17 @@
 
 {% block main %}
   <h2>Login</h2>
-  <form method="post" id="login_form">
+  <form method="post" id="login_form" class="ui form" action="{% url 'login' %}">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Login</button>
+      {% if error %}
+	<div id="error" class="ui red message">
+		<div class="inner">
+			<p>you need to register first</p>
+		</div>
+	</div>
+{% endif %}
+    <button type="submit" class="ui button">Login</button>
   </form>
 {% endblock %}
 </body>
