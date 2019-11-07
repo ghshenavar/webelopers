@@ -3,14 +3,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>contact</title>
+    <title>Contact</title>
 </head>
 <body>
     {% block main %}
     <form id="contact_us_form" method="post" class="ui form" action="{% url 'contact_us' %}">
         {% csrf_token %}
         {{ form.as_p }}
-        <button class="ui button" type="submit">submit</button>
+        <button class="ui inverted secondary button" type="submit">submit</button>
     </form>
     {% endblock %}
 </body>

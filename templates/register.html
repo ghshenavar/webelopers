@@ -5,7 +5,7 @@
   <form method="post" class="ui form" id="register_form" action="{% url 'register' %}">
     {% csrf_token %}
     {{ form.as_p }}
-    <button name="submit" type="submit" class="ui button">Sign up</button>
+    <button name="submit" type="submit" class="ui inverted secondary button">Sign up</button>
   </form>
 {% endblock %}
 </html>
