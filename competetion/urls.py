@@ -16,11 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from webelopers.views import index, registering
+from webelopers.views import *
 
 urlpatterns = [
-	path('admin/', admin.site.urls),
-	path('', index, name='homePage'),
-	path('register/', registering, name='register'),
-
+    path('admin/', admin.site.urls),
+    path('', index, name='homePage'),
+    path('register/', registering, name='register'),
+    path('contact/', contact, name='contact_us'),
 ]

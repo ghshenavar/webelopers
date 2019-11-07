@@ -1,14 +1,28 @@
 <!DOCTYPE html>
+{% extends 'base.html' %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>contact</title>
 </head>
 <body>
-    <form id="contac_us_form" method="post">
-        <input name="title" id="name">
-        <input name="emial" id="email">
-        <textarea name="text" id="text"></textarea>
+    {% block main %}
+    <form id="contac_us_form" method="post" class="ui form">
+        {% csrf_token %}
+        <div class="field">
+            <label>title</label>
+            <input name="title" id="name">
+        </div>
+        <div class="field">
+            <label>email address</label>
+            <input name="emial" id="email">
+        </div>
+        <div class="field">
+            <label>text</label>
+            <textarea name="text" id="text"></textarea>
+        </div>
+        <button class="ui button" type="submit">submit</button>
     </form>
+    {% endblock %}
 </body>
 </html>

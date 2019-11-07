@@ -3,7 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.shortcuts import render
-from webelopers.forms import SignUpForm
+from webelopers.forms import *
 
 
 def index(request):
@@ -30,5 +30,15 @@ def login(request):
 	return render(request, 'login.html', {'form': form})
 
 
-#def contact(request):
-	#if request.method == 'POST':
+def contact(request):
+	if request.method == 'POST':
+		form = ContactForm(request.POST)
+		if form.is_valid():
+			return redirect('confirmation')
+	else:
+		form = forms.Form()
+	return render(request, 'contact.html', {'form': form})
+
+
+def confirmation(request):
+	render(request, 'confirmed.html')
