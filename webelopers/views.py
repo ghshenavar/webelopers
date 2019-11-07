@@ -17,7 +17,7 @@ def registering(request):
 			form.save()
 			username = form.cleaned_data.get('username')
 			raw_password = form.cleaned_data.get('password')
-			user = authenticate(username=username, password=raw_password,)
+			user = authenticate(username=username, password=raw_password)
 			#login(request, user)
 			return redirect('/')
 	else:
@@ -27,6 +27,15 @@ def registering(request):
 
 
 def login(request):
+	if request.method == 'POST':
+		form = LoginForm(request.POST)
+		if form.is_valid():
+			form.save()
+			username = form.cleaned_data.get('username')
+			password = form.cleaned_data.get('password')
+			return redirect('confirmed/')
+	else:
+		form = LoginForm()
 	return render(request, 'login.html', {'form': form})
 
 

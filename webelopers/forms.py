@@ -23,3 +23,11 @@ class ContactForm(forms.Form):
 
 	class Meta:
 		fields = ('title', 'email', 'text',)
+
+
+class LoginForm(forms.Form):
+	username = forms.CharField(max_length=100)
+	password = forms.CharField(max_length=100)
+
+	class Meta:
+		fields = ('username', 'password')
