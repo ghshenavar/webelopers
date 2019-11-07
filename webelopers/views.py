@@ -16,7 +16,6 @@ def registering(request):
 			username = form.cleaned_data.get('username')
 			raw_password = form.cleaned_data.get('password')
 			user = authenticate(username=username, password=raw_password)
-			# login(request, user)
 			return redirect('/')
 	else:
 		form = SignUpForm()
@@ -64,10 +63,3 @@ def confirmation(request):
 def logout_view(request):
 	logout(request)
 	return redirect('/')
-
-
-def profile(request):
-	return render(request,'profile.html')
-
-def panel(request):
-	return render(request,'panel.html')
