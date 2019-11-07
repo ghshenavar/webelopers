@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b975c217-b284-4046-9602-61ebdc5f5de0" name="Default Changelist" comment="message updated" />
+    <list default="true" id="b975c217-b284-4046-9602-61ebdc5f5de0" name="Default Changelist" comment="message updated">
+      <changelist_data />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1573108511692</updated>
       <workItem from="1573108528303" duration="5368000" />
-      <workItem from="1573118328468" duration="257000" />
+      <workItem from="1573118328468" duration="632000" />
     </task>
     <task id="LOCAL‎۰۰۰۰۱" summary="message updated">
       <created>1573118511649</created>
@@ -74,11 +76,28 @@
       <option name="presentableId" value="LOCAL‎۰۰۰۰۱" />
       <updated>1573118511649</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL‎۰۰۰۰۲" summary="message updated">
+      <created>1573118789893</created>
+      <option name="number" value="LOCAL‎۰۰۰۰۲" />
+      <option name="presentableId" value="LOCAL‎۰۰۰۰۲" />
+      <updated>1573118789893</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="message updated" />
