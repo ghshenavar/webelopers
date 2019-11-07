@@ -2,18 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
-{% extends 'base.html' %}
-
-{% block main %}
-  <h2>Login</h2>
-  <form method="post" id="login_form">
+<div id="navbar">
+    <nav id="navbar" class="navbar navbar-light bg-light">
+        <a id="login" class="navbar-brand" href="/login/">login</a>
+        <a id="register" class="navbar-brand" href="/register/">register</a>
+        <a id="homepage" class="navbar-brand" href="/">homepage</a>
+        <a id="contact_us" class="navbar-brand" href="/contact/">contact</a>
+    </nav>
+</div>
+<h2>Login</h2>
+<form method="post" id="login_form">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Login</button>
-  </form>
-{% endblock %}
+</form>
 </body>
 </html>

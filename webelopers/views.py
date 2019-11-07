@@ -54,8 +54,8 @@ def contact(request):
 			email = form.cleaned_data.get('email')
 			text = form.cleaned_data.get('text')
 			x=''
-			y=x+email+text
-			send_mail(subject, y, 'dornaaadehghani@gmail.com', ['dornadehghani@ymail.com', ])
+			y=x+email+'\n'+text
+			send_mail(subject, y, 'dornaaadehghani@gmail.com', ['‫‪webe19lopers@gmail.com', ])
 			return redirect('confirmed/')
 	else:
 		form = ContactForm()
