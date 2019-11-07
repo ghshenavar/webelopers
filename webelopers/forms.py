@@ -19,7 +19,7 @@ class SignUpForm(UserCreationForm):
 class ContactForm(forms.Form):
 	title = forms.CharField(label='title', max_length=100)
 	email = forms.EmailField(label='email', max_length=254)
-	text = forms.CharField(label='text', min_length=10, max_length=250)
+	text = forms.CharField(label='text', min_length=10, max_length=250, widget=forms.Textarea)
 
 	class Meta:
 		fields = ('title', 'email', 'text',)
