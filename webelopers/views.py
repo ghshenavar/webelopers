@@ -33,17 +33,21 @@ def registering(request):
 	return render(request, 'register.html', {'form': form})
 
 
-def login(request):
+def Login(request):
+	error = False
 	if request.method == 'POST':
 		form = LoginForm(request.POST)
 		if form.is_valid():
-			form.save()
 			username = form.cleaned_data.get('username')
 			password = form.cleaned_data.get('password')
-			return redirect('confirmed/')
+			user = authenticate(username=username, password=password)
+			if user is not None:
+				login(request, user)
+				return redirect('/')
+			error = True
 	else:
 		form = LoginForm()
-	return render(request, 'login.html', {'form': form})
+	return render(request, 'login.html', {'form': form, 'error': error})
 
 
 def contact(request):

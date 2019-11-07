@@ -6,19 +6,22 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 <body>
-<div id="navbar">
-    <nav id="navbar" class="navbar navbar-light bg-light">
-        <a id="login" class="navbar-brand" href="/login/">login</a>
-        <a id="register" class="navbar-brand" href="/register/">register</a>
-        <a id="homepage" class="navbar-brand" href="/">homepage</a>
-        <a id="contact_us" class="navbar-brand" href="/contact/">contact</a>
-    </nav>
-</div>
-<h2>Login</h2>
-<form method="post" id="login_form">
+{% extends 'base.html' %}
+
+{% block main %}
+  <h2>Login</h2>
+  <form method="post" id="login_form" class="ui form" action="{% url 'login' %}">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Login</button>
-</form>
+      {% if error %}
+	<div id="error" class="ui red message">
+		<div class="inner">
+			<p>you need to register first</p>
+		</div>
+	</div>
+{% endif %}
+    <button type="submit" class="ui button">Login</button>
+  </form>
+{% endblock %}
 </body>
 </html>
