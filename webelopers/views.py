@@ -2,8 +2,8 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-
-from webelopers.forms import SignUpForm
+from django.shortcuts import render
+from webelopers.forms import *
 
 
 def index(request):
@@ -16,10 +16,10 @@ def registering(request):
 		if form.is_valid():
 			form.save()
 			username = form.cleaned_data.get('username')
-			raw_password = form.cleaned_data.get('password1')
-			user = authenticate(username=username,password=raw_password, )
-			login(request, user)
-			return redirect('home')
+			raw_password = form.cleaned_data.get('password')
+			user = authenticate(username=username, password=raw_password,)
+			#login(request, user)
+			return redirect('/')
 	else:
 		form = SignUpForm()
 
@@ -29,3 +29,17 @@ def registering(request):
 def login(request):
 
 	return render(request, 'login.html', {'form': form})
+
+
+def contact(request):
+	if request.method == 'POST':
+		form = ContactForm(request.POST)
+		if form.is_valid():
+			return redirect('confirmed/')
+	else:
+		form = ContactForm()
+	return render(request, 'contact.html', {'form': form})
+
+
+def confirmation(request):
+	return render(request, 'confirmation.html')

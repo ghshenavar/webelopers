@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>contact</title>
+</head>
+<body>
+    {% block main %}
+    <form id="contac_us_form" method="post" class="ui form" action="{% url 'contact/confirmed' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="ui button" type="submit">submit</button>
+    </form>
+    {% endblock %}
+</body>
+</html>
