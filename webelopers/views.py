@@ -1,5 +1,12 @@
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.image import MIMEImage
+from pathlib import Path
+import smtplib
+
+from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.shortcuts import render
@@ -18,7 +25,7 @@ def registering(request):
 			username = form.cleaned_data.get('username')
 			raw_password = form.cleaned_data.get('password')
 			user = authenticate(username=username, password=raw_password)
-			#login(request, user)
+			# login(request, user)
 			return redirect('/')
 	else:
 		form = SignUpForm()
@@ -47,6 +54,12 @@ def contact(request):
 	if request.method == 'POST':
 		form = ContactForm(request.POST)
 		if form.is_valid():
+			subject = form.cleaned_data.get('title')
+			email = form.cleaned_data.get('email')
+			text = form.cleaned_data.get('text')
+			x=''
+			y=x+email+'\n'+text
+			send_mail(subject, y, 'dornaaadehghani@gmail.com', ['‫‪webe19lopers@gmail.com', ])
 			return redirect('confirmed/')
 	else:
 		form = ContactForm()
