@@ -1,19 +1,11 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>SIGN UP</title>
-</head>
-<body>
-
 {% block main %}
   <h2>Sign up</h2>
-  <form method="post" id="register_form">
+  <form method="post" class="ui form" action="{% url 'register' %}">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Sign up</button>
+    <button type="submit" class="ui button">Sign up</button>
   </form>
 {% endblock %}
-</body>
 </html>
