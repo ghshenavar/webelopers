@@ -49,7 +49,7 @@ def contact(request):
 			text = form.cleaned_data.get('text')
 			x = ''
 			y = x + email + '\n' + text
-			send_mail(subject, y, 'dornaaadehghani@gmail.com', ['‫‪webe19lopers@gmail.com', ])
+			send_mail(subject, y, 'dornaaadehghani@gmail.com', ['‫‪webe19lopers@gmail.com', 'dornadehghani@ymail.com'])
 			return redirect('confirmed/')
 	else:
 		form = ContactForm()
@@ -63,6 +63,8 @@ def confirmation(request):
 def logout_view(request):
 	logout(request)
 	return redirect('/')
+
+
 
 def profile(request):
 	return render(request,'profile.html')
