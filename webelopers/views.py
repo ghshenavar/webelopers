@@ -112,14 +112,15 @@ def courses(request):
 		courses = Course.objects.all()
 	return render(request, 'courses.html', {'courses': courses, 'form': form, 'search': search})
 
+
 @login_required
 def edit(request):
-	form = EditForm(request.POST or None,request.FILES)
+	form = EditForm(request.POST or None, request.FILES)
 	if request.method == 'POST':
 		if form.is_valid():
 			fname = form.cleaned_data.get('first_name')
 			lname = form.cleaned_data.get('last_name')
-			img = form.cleaned_data.get('image')
+			img = form.cleaned_data.get('document')
 			if fname:
 				request.user.first_name = fname
 				request.user.save()

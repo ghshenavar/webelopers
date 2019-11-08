@@ -23,7 +23,7 @@ class SignUpForm(UserCreationForm):
 	password2 = forms.CharField(max_length=100)
 
 	class Meta:
-		model = User
+		model = Account
 		fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2',)
 
 	def clean(self):
@@ -68,14 +68,14 @@ class courseForm(ModelForm):
 		fields = ('department', 'name', 'course_number', 'group_number', 'teacher', 'start_time', 'end_time', 'first_day', 'second_day',)
 
 
-class EditForm(forms.Form):
-	first_name = forms.CharField(max_length=100, required=False)
-	last_name = forms.CharField(max_length=100, required=False)
+class EditForm(ModelForm):
+	first_name = forms.CharField(required=False)
+	last_name = forms.CharField(required=False)
 	document = forms.FileField(required=False)
 
-	class Mate:
+	class Meta:
 		model = Profile
-		fields = ('first_name', 'last_name', 'document')
+		fields = ('first_name', 'last_name', 'document',)
 
 
 
