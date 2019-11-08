@@ -9,7 +9,7 @@
 {% block main %}
 <div id="all_courses" class="ui raised segment">
     {% for item in courses %}
-        <div class="{{ item.course_number }}_{{ item.group_number }}" class="ui segment">
+        <div class="{{ item.course_number }}_{{ item.group_number }} ui segment">
             <h>
                 {{ item.name }}
             </h>
