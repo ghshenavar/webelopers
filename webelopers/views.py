@@ -64,5 +64,6 @@ def logout_view(request):
 	logout(request)
 	return redirect('/')
 
+
 def profile(request):
 	return render(request,'profile.html')

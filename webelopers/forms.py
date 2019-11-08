@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django.forms.utils import ErrorList
 
 
 class SignUpForm(UserCreationForm):
@@ -20,11 +21,11 @@ class SignUpForm(UserCreationForm):
 		username = cd.get('username')
 		user = User.objects.filter(username=username)
 		if user is not None:
-			raise forms.ValidationError("نام کاربری شما در سیستم موجود است")
-		if "password1" in cd and "password2" in cd:
-			if cd["password1"] != cd["password2"]:
-				self._errors["password2"] = self.error_class(['گذرواژه و تکرار گذرواژه یکسان نیستند'])
-				del cd['password2']
+			self.add_error('username', "نام کاربری شما در سیستم موجود است")
+		password1 = cd.get('password1')
+		password2 = cd.get('password2')
+		if password1 != password2:
+			self.add_error('password2', "گذرواژه و تکرار گذرواژه یکسان نیستند")
 		return cd
 
 
