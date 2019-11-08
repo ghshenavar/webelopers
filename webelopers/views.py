@@ -104,8 +104,8 @@ def courses(request):
 	if request.method == 'POST':
 		form = searchform(request.POST)
 		if form.is_valid():
-			name = form.cleaned_data.get('name')
-			courses = Course.objects.filter(department=name)
+			search_query = form.cleaned_data.get('search_query')
+			courses = Course.objects.filter(department=search_query)
 			search = True
 	else:
 		form = searchform()

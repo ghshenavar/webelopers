@@ -56,10 +56,10 @@ class LoginForm(forms.Form):
 
 
 class searchform(forms.Form):
-	name = forms.CharField(max_length=100)
+	search_query = forms.CharField(max_length=100)
 
 	class Meta:
-		fields = ('name')
+		fields = ('search_query')
 
 
 class courseForm(ModelForm):

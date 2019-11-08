@@ -10,7 +10,7 @@
     <form id="search_form" class="ui form" action="{% url 'courses' %}" method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="ui inverted secondary button">submit</button>
+        <button name="submit" type="submit" class="ui inverted secondary button">submit</button>
     </form>
     {% if not search %}
     <div id="all_courses" class="ui raised segment">
