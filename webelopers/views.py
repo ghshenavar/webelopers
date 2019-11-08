@@ -90,7 +90,7 @@ def add_course(request):
 			data = form.cleaned_data
 			c = Course(department=data['department'], name=data['name'], course_number=data['course_number'],
 					   group_number=data['group_number'], teacher=data['teacher'], start_time=data['start_time'],
-					   end_time=data['end_time'], first_day=data['first_day'], second_day=data['second_day'],)
+					   end_time=data['end_time'], first_day=data['first_day'], second_day=data['second_day'], )
 			c.save()
 			return redirect('/')
 	else:
@@ -102,14 +102,15 @@ def courses(request):
 	courses = Course.objects.all()
 	return render(request, 'courses.html', {'courses': courses})
 
+
 @login_required
 def edit(request):
-	form = EditForm(request.POST or None,request.FILES)
+	form = EditForm(request.POST or None, request.FILES)
 	if request.method == 'POST':
 		if form.is_valid():
 			fname = form.cleaned_data.get('first_name')
 			lname = form.cleaned_data.get('last_name')
-			img = form.cleaned_data.get('image')
+			img = form.cleaned_data.get('document')
 			if fname:
 				request.user.first_name = fname
 				request.user.save()
