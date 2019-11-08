@@ -17,7 +17,12 @@
                 {{ item.department }}
             </div>
             <div>
-                {{ item.first_day }} and {{item.second_day}}
+                {% if item.second_day is 10 %}
+                    {{ item.first_day }}
+                {% endif %}
+               {% if item.second_day is not 10 %}
+                    {{ item.first_day }} to {{item.second_day}}
+                {% endif %}
             </div>
             <div>
                 {{ item.start_time }} to {{ item.end_time }}

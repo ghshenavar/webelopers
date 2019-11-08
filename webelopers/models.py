@@ -26,4 +26,4 @@ class Course(models.Model):
     start_time = models.TimeField()
     end_time = models.TimeField()
     first_day = models.IntegerField(max_length=1, choices=DAYS_OF_WEEK)
-    second_day = models.IntegerField(max_length=1, choices=DAYS_OF_WEEK)
+    second_day = models.IntegerField(max_length=1, choices=DAYS_OF_WEEK, blank=True)
