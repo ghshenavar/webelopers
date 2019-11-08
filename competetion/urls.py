@@ -26,10 +26,13 @@ urlpatterns = [
 	path('contact/', contact, name='contact_us'),
 	path('contact/confirmed/', confirmation, name='confirmed'),
 	path('login/', Login, name='login'),
-	path('logout/', logout_view, name='logout'),
-	path('profile/', profile, name='profile'),
-	path('panel/', panel, name='panel'),
+	path('logout/', logout_view, name = 'logout'),
+	path('profile/',profile,name='profile'),
+	path('panel/',panel,name='panel'),
+	path('add_course/', add_course, name='add_course'),
+	path('courses/', courses, name='courses'),
 	path('edit/', edit, name='edit')
 ]
+
 if settings.DEBUG:
 	urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

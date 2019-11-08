@@ -1,6 +1,8 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
+from django.forms import ModelForm
+from webelopers.models import *
 
 from webelopers.models import Profile
 
@@ -44,6 +46,12 @@ class LoginForm(forms.Form):
 
 	class Meta:
 		fields = ('username', 'password')
+
+
+class courseForm(ModelForm):
+	class Meta:
+		model = Course
+		fields = ('department', 'name', 'course_number', 'group_number', 'teacher', 'start_time', 'end_time', 'first_day', 'second_day',)
 
 
 class EditForm(forms.Form):

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% block main %}
+<div id="all_courses" class="ui raised segment">
+    {% for item in courses %}
+        <div class="{{ item.course_number }}_{{ item.group_number }}" class="ui segment">
+            <h>
+                {{ item.name }}
+            </h>
+            <div>
+                {{ item.department }}
+            </div>
+            <div>
+                {{ item.first_day }} and {{item.second_day}}
+            </div>
+            <div>
+                {{ item.start_time }} to {{ item.end_time }}
+            </div>
+            <div>
+                {{ item.teacher }}
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
+</body>
+</html>
