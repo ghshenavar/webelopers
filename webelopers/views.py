@@ -105,7 +105,12 @@ def courses(request):
 		form = searchform(request.POST)
 		if form.is_valid():
 			search_query = form.cleaned_data.get('search_query')
-			courses = Course.objects.filter(department=search_query)
+			if form.cleaned_data.get('course'):
+				courses = Course.objects.filter(name=search_query)
+			elif form.cleaned_data.get('teacher'):
+				courses = Course.objects.filter(teacher=search_query)
+			else:
+				courses = Course.objects.filter(department=search_query)
 			search = True
 	else:
 		form = searchform()

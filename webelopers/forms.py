@@ -57,9 +57,11 @@ class LoginForm(forms.Form):
 
 class searchform(forms.Form):
 	search_query = forms.CharField(max_length=100)
-
+	department = forms.BooleanField(initial=False, required=False)
+	teacher = forms.BooleanField(initial=False, required=False)
+	course = forms.BooleanField(initial=False, required=False)
 	class Meta:
-		fields = ('search_query')
+		fields = ('search_query', 'department', 'teacher', 'course')
 
 
 class courseForm(ModelForm):
