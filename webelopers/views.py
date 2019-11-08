@@ -90,7 +90,8 @@ def add_course(request):
 			data = form.cleaned_data
 			c = Course(department=data['department'], name=data['name'], course_number=data['course_number'],
 					   group_number=data['group_number'], teacher=data['teacher'], start_time=data['start_time'],
-					   end_time=data['end_time'], first_day=data['first_day'], second_day=data['second_day'], )
+					   end_time=data['end_time'], first_day=data['first_day'], second_day=data['second_day'],)
+			c.second_day = 10
 			c.save()
 			return redirect('/')
 	else:

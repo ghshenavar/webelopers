@@ -5,6 +5,13 @@ from django.forms import ModelForm
 from webelopers.models import *
 
 from webelopers.models import Profile
+DAYS_OF_WEEK = (
+    (0, 'Saturday'),
+    (1, 'Sunday'),
+    (2, 'Monday'),
+    (3, 'Tuesday'),
+    (4, 'Wednesday'),
+)
 
 
 class SignUpForm(UserCreationForm):

@@ -7,27 +7,32 @@
 </head>
 <body>
 {% block main %}
-<div id="all_courses" class="ui raised segment">
-    {% for item in courses %}
-        <div class="{{ item.course_number }}_{{ item.group_number }}" class="ui segment">
-            <h>
-                {{ item.name }}
-            </h>
-            <div>
-                {{ item.department }}
+    <div id="all_courses" class="ui raised segment">
+        {% for item in courses %}
+            <div class="{{ item.course_number }}_{{ item.group_number }} ui segment">
+                <h4>
+                    {{ item.name }}
+                </h4>
+                <div>
+                    {{ item.department }}
+                </div>
+                <div>
+                    {% if item.second_day is 10 %}
+                        {{ item.first_day }}
+                    {% endif %}
+                    {% if item.second_day is not 10 %}
+                        {{ item.first_day }} to {{ item.second_day }}
+                    {% endif %}
+                </div>
+                <div>
+                    {{ item.start_time }} to {{ item.end_time }}
+                </div>
+                <div>
+                    {{ item.teacher }}
+                </div>
             </div>
-            <div>
-                {{ item.first_day }} and {{item.second_day}}
-            </div>
-            <div>
-                {{ item.start_time }} to {{ item.end_time }}
-            </div>
-            <div>
-                {{ item.teacher }}
-            </div>
-        </div>
-    {% endfor %}
-</div>
+        {% endfor %}
+    </div>
 {% endblock %}
 </body>
 </html>
