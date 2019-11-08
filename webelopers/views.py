@@ -71,9 +71,12 @@ def profile(request):
 	first_name = request.user.first_name
 	last_name = request.user.last_name
 	username = request.user.username
+	if request.user.image:
+		image = request.user.image
 	context = {'first_name': first_name,
 			   'last_name': last_name,
 			   'username': username,
+			   'image': image,
 			   }
 	return render(request, 'profile.html', context)
 
@@ -88,11 +91,15 @@ def edit(request):
 		if form.is_valid():
 			fname = form.cleaned_data.get('first_name')
 			lname = form.cleaned_data.get('last_name')
+			img = form.cleaned_data.get('image')
 			if fname:
 				request.user.first_name = fname
 				request.user.save()
 			if lname:
 				request.user.last_name = lname
+				request.user.save()
+			if img:
+				request.user.image = img
 				request.user.save()
 			return redirect('/profile')
 		else:

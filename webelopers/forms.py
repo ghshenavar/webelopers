@@ -47,6 +47,7 @@ class LoginForm(forms.Form):
 class EditForm(forms.Form):
 	first_name = forms.CharField(max_length=100, required=False)
 	last_name = forms.CharField(max_length=100, required=False)
+	image = forms.FileField(required=False)
 
 	class Mate:
-		fields = ('first_name', 'last_name')
+		fields = ('first_name', 'last_name', 'image')
