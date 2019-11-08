@@ -2,6 +2,8 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
+from webelopers.models import Profile
+
 
 class SignUpForm(UserCreationForm):
 	first_name = forms.CharField(max_length=30)
@@ -47,7 +49,11 @@ class LoginForm(forms.Form):
 class EditForm(forms.Form):
 	first_name = forms.CharField(max_length=100, required=False)
 	last_name = forms.CharField(max_length=100, required=False)
-	image = forms.FileField(required=False)
+	document = forms.FileField(required=False)
 
 	class Mate:
-		fields = ('first_name', 'last_name', 'image')
+		model = Profile
+		fields = ('first_name', 'last_name', 'document')
+
+
+

@@ -7,8 +7,8 @@
     <title></title>
 </head>
 <body>
+{% load static %}
 {% block main %}
-    {% load static %}
     <center style="font-size:xx-large"> ویرایش اطلاعات
     </center>
     <form method="post" id="setting_form" class="ui form" action="{% url 'edit' %}" enctype="multipart/form-data">

@@ -71,22 +71,24 @@ def profile(request):
 	first_name = request.user.first_name
 	last_name = request.user.last_name
 	username = request.user.username
-	if request.user.image:
-		image = request.user.image
+	# if request.user.image:
+	# 	image = request.user.image
 	context = {'first_name': first_name,
 			   'last_name': last_name,
 			   'username': username,
-			   'image': image,
+			   # 'image': image,
 			   }
 	return render(request, 'profile.html', context)
 
 
+@login_required
 def panel(request):
 	return render(request, 'panel.html')
 
 
+@login_required
 def edit(request):
-	form = EditForm(request.POST or None)
+	form = EditForm(request.POST or None,request.FILES)
 	if request.method == 'POST':
 		if form.is_valid():
 			fname = form.cleaned_data.get('first_name')
