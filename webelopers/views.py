@@ -4,7 +4,6 @@ from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from webelopers.forms import *
 
-
 def index(request):
 	return render(request, 'homePage.html')
 
@@ -80,3 +79,21 @@ def profile(request):
 
 def panel(request):
 	return render(request, 'panel.html')
+
+
+def edit(request):
+	form = EditForm(request.POST or None)
+	if request.method == 'POST':
+		if form.is_valid():
+			fname = form.cleaned_data.get('first_name')
+			lname = form.cleaned_data.get('first_name')
+			if fname is not None:
+				request.user.first_name=fname
+				request.user.save()
+			if lname is not None:
+				request.user.last_name = lname
+				request.user.save()
+			return redirect('/profile')
+		else:
+			form = EditForm()
+	return render(request, 'edit.html', {'form': form})

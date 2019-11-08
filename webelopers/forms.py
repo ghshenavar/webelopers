@@ -15,17 +15,18 @@ class SignUpForm(UserCreationForm):
 		model = User
 		fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2',)
 
-	# def clean(self):
-	# 	cd = self.cleaned_data
-	# 	username = cd.get('username')
-	# 	user = User.objects.filter(username=username)
-	# 	if user is not None:
-	# 		raise forms.ValidationError("نام کاربری شما در سیستم موجود است")
-	# 	if "password1" in cd and "password2" in cd:
-	# 		if cd["password1"] != cd["password2"]:
-	# 			self._errors["password2"] = self.error_class(['گذرواژه و تکرار گذرواژه یکسان نیستند'])
-	# 			del cd['password2']
-	# 	return cd
+
+# def clean(self):
+# 	cd = self.cleaned_data
+# 	username = cd.get('username')
+# 	user = User.objects.filter(username=username)
+# 	if user is not None:
+# 		raise forms.ValidationError("نام کاربری شما در سیستم موجود است")
+# 	if "password1" in cd and "password2" in cd:
+# 		if cd["password1"] != cd["password2"]:
+# 			self._errors["password2"] = self.error_class(['گذرواژه و تکرار گذرواژه یکسان نیستند'])
+# 			del cd['password2']
+# 	return cd
 
 
 class ContactForm(forms.Form):
@@ -43,3 +44,11 @@ class LoginForm(forms.Form):
 
 	class Meta:
 		fields = ('username', 'password')
+
+
+class EditForm(forms.Form):
+	first_name = forms.CharField(max_length=100, required=False)
+	last_name = forms.CharField(max_length=100, required=False)
+
+	class Mate:
+		fields = ('first_name', 'last_name')

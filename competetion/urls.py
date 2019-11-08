@@ -25,7 +25,8 @@ urlpatterns = [
 	path('contact/', contact, name='contact_us'),
 	path('contact/confirmed/', confirmation, name='confirmed'),
 	path('login/', Login, name='login'),
-	path('logout/', logout_view, name = 'logout'),
-	path('profile/',profile,name='profile'),
-	path('panel/',panel,name='panel')
+	path('logout/', logout_view, name='logout'),
+	path('profile/', profile, name='profile'),
+	path('panel/', panel, name='panel'),
+	path('edit/', edit, name='edit')
 ]

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+{% block main %}
+    <center style="font-size:xx-large"> ویرایش اطلاعات
+    </center>
+    <form method="post" id="setting_form" class="ui form" action="{% url 'edit' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <form method="get" action="{% url "profile" %}">
+            <button type="submit" id="settings" class="ui button" onclick=>
+                Done!
+            </button>
+        </form>
+    </form>
+{% endblock %}
+</body>
+</html>

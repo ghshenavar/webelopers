@@ -9,7 +9,12 @@
     <h2>Profile</h2>
     <span style="font-size: large" id="text_first_name">{{ first_name }}</span>
     <span style="font-size: large" id="text_last_name">{{ last_name }}</span>
-    <span style="font-size: large" id="text_user_name">{{ username }}</span>
+    <span style="font-size: large" id="text_user_name">{{ username }}</span><br/>
+    <form method="get" action="{% url "edit" %}">
+    <button type="submit" id="settings" class="ui button" onclick=>
+        ویرایش اطلاعات
+    </button>
+    </form>
 {% endblock %}
 </body>
 </html>
