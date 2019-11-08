@@ -1,15 +1,6 @@
 from django.contrib.auth import login, authenticate, logout
-from django.contrib.auth.forms import UserCreationForm
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-from email.mime.image import MIMEImage
-from pathlib import Path
-import smtplib
-
 from django.core.mail import send_mail
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
-from django.shortcuts import render
 from webelopers.forms import *
 
 
@@ -56,8 +47,8 @@ def contact(request):
 			subject = form.cleaned_data.get('title')
 			email = form.cleaned_data.get('email')
 			text = form.cleaned_data.get('text')
-			x=''
-			y=x+email+'\n'+text
+			x = ''
+			y = x + email + '\n' + text
 			send_mail(subject, y, 'dornaaadehghani@gmail.com', ['‫‪webe19lopers@gmail.com', ])
 			return redirect('confirmed/')
 	else:
