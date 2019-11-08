@@ -68,7 +68,15 @@ def logout_view(request):
 
 @login_required
 def profile(request):
-	return render(request, 'profile.html')
+	first_name = request.user.first_name
+	last_name = request.user.last_name
+	username = request.user.username
+	context = {'first_name': first_name,
+			   'last_name': last_name,
+			   'username': username,
+			   }
+	return render(request, 'profile.html', context)
+
 
 def panel(request):
-	return render(request,'panel.html')
+	return render(request, 'panel.html')
