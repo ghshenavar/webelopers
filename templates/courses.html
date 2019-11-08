@@ -7,11 +7,12 @@
 </head>
 <body>
 {% block main %}
-    <form id="search_form" class="ui form" action="{% url 'courses' %}">
+    <form id="search_form" class="ui form" action="{% url 'courses' %}" method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="ui inverted secondary button">Login</button>
+        <button type="submit" class="ui inverted secondary button">submit</button>
     </form>
+    {% if not search %}
     <div id="all_courses" class="ui raised segment">
         {% for item in courses %}
             <div class="{{ item.course_number }}_{{ item.group_number }} ui segment">
@@ -38,6 +39,16 @@
             </div>
         {% endfor %}
     </div>
+    {% endif %}
+    {% if search %}
+        <div id="search_result" class="ui raised segment">
+            {% for item in courses %}
+            <div class="{{ item.course_number }}_{{ item.group_number }} ui segment">
+            {{ item.name }}, {{ item.teacher }}
+            </div>
+        {% endfor %}
+        </div>
+    {% endif %}
 {% endblock %}
 </body>
 </html>

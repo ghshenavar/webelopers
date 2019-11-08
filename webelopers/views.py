@@ -100,15 +100,17 @@ def add_course(request):
 
 
 def courses(request):
+	search = False
 	if request.method == 'POST':
 		form = searchform(request.POST)
-		if form.is_valid:
+		if form.is_valid():
 			name = form.cleaned_data.get('name')
 			courses = Course.objects.filter(department=name)
+			search = True
 	else:
 		form = searchform()
 		courses = Course.objects.all()
-	return render(request, 'courses.html', {'courses': courses, 'form': form})
+	return render(request, 'courses.html', {'courses': courses, 'form': form, 'search': search})
 
 @login_required
 def edit(request):
