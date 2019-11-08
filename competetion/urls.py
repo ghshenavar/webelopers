@@ -27,5 +27,7 @@ urlpatterns = [
 	path('login/', Login, name='login'),
 	path('logout/', logout_view, name = 'logout'),
 	path('profile/',profile,name='profile'),
-	path('panel/',panel,name='panel')
+	path('panel/',panel,name='panel'),
+	path('add_course/', add_course, name='add_course'),
+	path('courses/', courses, name='courses'),
 ]
