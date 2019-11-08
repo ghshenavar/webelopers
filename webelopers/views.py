@@ -1,4 +1,5 @@
 from django.contrib.auth import login, authenticate, logout
+from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from webelopers.forms import *
@@ -65,6 +66,9 @@ def logout_view(request):
 	return redirect('/')
 
 
-
+@login_required
 def profile(request):
-	return render(request,'profile.html')
+	return render(request, 'profile.html')
+
+def panel(request):
+	return render(request,'panel.html')
