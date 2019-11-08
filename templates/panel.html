@@ -8,7 +8,9 @@
 <body>
 {% block main %}
     <h2>Panel</h2>
+    {% if user.is_superuser %}
     <a id="make_new_course" class="ui button" href="/add_course/">add a course</a>
+    {% endif %}
     <a id="courses" class="ui button" href="/courses/">show all courses</a>
 {% endblock %}
 </body>
