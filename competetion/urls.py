@@ -26,5 +26,6 @@ urlpatterns = [
 	path('contact/confirmed/', confirmation, name='confirmed'),
 	path('login/', Login, name='login'),
 	path('logout/', logout_view, name = 'logout'),
-	path('profile/',profile,name='profile')
+	path('profile/',profile,name='profile'),
+	path('panel/',panel,name='panel')
 ]

@@ -1,4 +1,5 @@
 from django.contrib.auth import login, authenticate, logout
+from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
 from django.shortcuts import render, redirect
 from webelopers.forms import *
@@ -49,7 +50,7 @@ def contact(request):
 			text = form.cleaned_data.get('text')
 			x = ''
 			y = x + email + '\n' + text
-			send_mail(subject, y, 'dornaaadehghani@gmail.com', ['‫‪webe19lopers@gmail.com', ])
+			send_mail(subject, y, 'dornaaadehghani@gmail.com', ['‫‪webe19lopers@gmail.com', 'dornadehghani@ymail.com'])
 			return redirect('confirmed/')
 	else:
 		form = ContactForm()
@@ -65,5 +66,17 @@ def logout_view(request):
 	return redirect('/')
 
 
+@login_required
 def profile(request):
-	return render(request,'profile.html')
+	first_name = request.user.first_name
+	last_name = request.user.last_name
+	username = request.user.username
+	context = {'first_name': first_name,
+			   'last_name': last_name,
+			   'username': username,
+			   }
+	return render(request, 'profile.html', context)
+
+
+def panel(request):
+	return render(request, 'panel.html')
