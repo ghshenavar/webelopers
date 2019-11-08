@@ -4,6 +4,8 @@ from django.contrib.auth.models import User
 from django.forms import ModelForm
 from webelopers.models import *
 
+from webelopers.models import Profile
+
 
 class SignUpForm(UserCreationForm):
 	first_name = forms.CharField(max_length=30)
@@ -50,3 +52,16 @@ class courseForm(ModelForm):
 	class Meta:
 		model = Course
 		fields = ('department', 'name', 'course_number', 'group_number', 'teacher', 'start_time', 'end_time', 'first_day', 'second_day',)
+
+
+class EditForm(forms.Form):
+	first_name = forms.CharField(max_length=100, required=False)
+	last_name = forms.CharField(max_length=100, required=False)
+	document = forms.FileField(required=False)
+
+	class Mate:
+		model = Profile
+		fields = ('first_name', 'last_name', 'document')
+
+
+

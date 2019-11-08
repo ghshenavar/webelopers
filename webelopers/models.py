@@ -1,6 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
+class Profile(models.Model):
+	first_name = models.CharField(max_length=100)
+	last_name = models.CharField(max_length=100)
+	document = models.FileField(upload_to='media/')
+
 # Create your models here.
 DAYS_OF_WEEK = (
     (0, 'Saturday'),

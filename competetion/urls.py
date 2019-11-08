@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from django.conf import settings
+from django.conf.urls.static import static
 from webelopers.views import *
 
 urlpatterns = [
@@ -30,4 +31,8 @@ urlpatterns = [
 	path('panel/',panel,name='panel'),
 	path('add_course/', add_course, name='add_course'),
 	path('courses/', courses, name='courses'),
+	path('edit/', edit, name='edit')
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

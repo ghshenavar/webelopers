@@ -78,6 +78,7 @@ def profile(request):
 	return render(request, 'profile.html', context)
 
 
+@login_required
 def panel(request):
 	return render(request, 'panel.html')
 
@@ -100,3 +101,25 @@ def add_course(request):
 def courses(request):
 	courses = Course.objects.all()
 	return render(request, 'courses.html', {'courses': courses})
+
+@login_required
+def edit(request):
+	form = EditForm(request.POST or None,request.FILES)
+	if request.method == 'POST':
+		if form.is_valid():
+			fname = form.cleaned_data.get('first_name')
+			lname = form.cleaned_data.get('last_name')
+			img = form.cleaned_data.get('image')
+			if fname:
+				request.user.first_name = fname
+				request.user.save()
+			if lname:
+				request.user.last_name = lname
+				request.user.save()
+			if img:
+				request.user.image = img
+				request.user.save()
+			return redirect('/profile')
+		else:
+			form = EditForm()
+	return render(request, 'edit.html', {'form': form})

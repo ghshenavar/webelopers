@@ -5,11 +5,19 @@
     <meta charset="UTF-8">
 </head>
 <body>
+{% load static %}
 {% block main %}
     <h2>Profile</h2>
+    <img id="profile_image" width="300" height="200" src="{% static "profile_image.jpg" %}" alt="My image"><br/>
     <span style="font-size: large" id="text_first_name">{{ first_name }}</span>
     <span style="font-size: large" id="text_last_name">{{ last_name }}</span>
-    <span style="font-size: large" id="text_user_name">{{ username }}</span>
+    <span style="font-size: large" id="text_user_name">{{ username }}</span><br/>
+    <form method="get" id="setting" action="{% url "edit" %}">
+        <button type="submit" id="setting" class="ui button" onclick=>
+            <a id="setting" href="/edit/"></a>
+            ویرایش اطلاعات
+        </button>
+    </form>
 {% endblock %}
 </body>
 </html>
