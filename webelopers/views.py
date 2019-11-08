@@ -112,6 +112,7 @@ def courses(request):
 			else:
 				courses = Course.objects.filter(department=search_query)
 			search = True
+		form = searchform()
 	else:
 		form = searchform()
 		courses = Course.objects.all()
