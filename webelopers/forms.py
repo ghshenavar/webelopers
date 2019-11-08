@@ -18,8 +18,7 @@ class SignUpForm(UserCreationForm):
 	def clean(self):
 		cd = self.cleaned_data
 		username = cd.get('username')
-		user = User.objects.filter(username=username)
-		if user is not None:
+		if User.objects.filter(username=username).exists():
 			self.add_error('username', "نام کاربری شما در سیستم موجود است")
 		password1 = cd.get('password1')
 		password2 = cd.get('password2')
