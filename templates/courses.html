@@ -7,6 +7,11 @@
 </head>
 <body>
 {% block main %}
+    <form id="search_form" class="ui form" action="{% url 'courses' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="ui inverted secondary button">Login</button>
+    </form>
     <div id="all_courses" class="ui raised segment">
         {% for item in courses %}
             <div class="{{ item.course_number }}_{{ item.group_number }} ui segment">

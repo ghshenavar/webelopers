@@ -55,6 +55,13 @@ class LoginForm(forms.Form):
 		fields = ('username', 'password')
 
 
+class searchform(forms.Form):
+	name = forms.CharField(max_length=100)
+
+	class Meta:
+		fields = ('name')
+
+
 class courseForm(ModelForm):
 	class Meta:
 		model = Course
